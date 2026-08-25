@@ -11,7 +11,7 @@
 ### [Procedimento Operacional Padrão (POP)](./)
    * POP de Backup básico e Retenção de Dados (VSS & Cobian Reflector)
    * POP de Gestão de Print Server e Manutenção do Spooler de Impressão.
-### [5. Resolução de incidentes (Troubleshooting)](./)
+### [Resolução de incidentes (Troubleshooting)](./)
    * Knowledge Base Article (KBA)
 
 ---
