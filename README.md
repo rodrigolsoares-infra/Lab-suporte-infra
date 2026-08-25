@@ -3,7 +3,7 @@
 ---
 ## 📝 Projetos
 ### [Etapas de Implementação AD DS](./)
-   * Configuração de servidor Active Directory, Unidades Organizacionais (OUs) e GPOs no Windows Server.
+   * Configuração de servidor Active Directory, Unidades Organizacionais (OUs) no Windows Server.
 ### [Configurando serviços de rede DHCP, DNS e Servidor de arquivos NTFS](./)
    * Configuração de Servidor DHCP e Resolução Reversa DNS e implementação de File Server com Permissões Compartilhadas e NTFS.
 ### [Aplicação de políticas de grupo (GPO)](./)
