@@ -1,1 +1,38 @@
-# Lab-suporte-infra
+# 🖥️ Lab-suporte-infra | Infraestrutura On-Premise, Active Directory DS & GPOs
+Este repositório documenta a implementação prática de uma infraestrutura de rede corporativa *On-Premise* do zero. O objetivo deste laboratório é simular cenários reais de administração de servidores, gestão de identidades com Active Directory Domain Services (AD DS), aplicação de políticas de grupo (GPOs), elaboração de POPs (Procedimentos Operacionais Padrão) e resolução de incidentes (troubleshooting) de Suporte N1/N2.
+---
+## 📝 Projetos
+Etapas de Implementação AD DS
+Integrativo de Scripts (PowerShell)
+Aplicação de políticas de grupo (GPO)
+Procedimento Operacional Padrão (POP)
+Resolução de incidentes (troubleshooting)
+
+---
+## 📋 Visão Geral da Topologia
+
+| Ativo / VM | Sistema Operacional | Função / Hostname | Endereço IP |
+| :--- | :--- | :--- | :--- |
+| **Domain Controller** | Windows Server 2022 Standard | `DC01.corp.local` | `192.168.10.10 /24` |
+| **Estação de Trabalho 01** | Windows 11 Pro | `CLI01-WIN11` | `DHCP (192.168.10.50)` |
+| **Gateway / Router** | pfSense / Router Virtual | `GW-CORP` | `192.168.10.1 /24` |
+
+---
+## 📐 Diagrama da Arquitetura
+```text
++-----------------------------------------------------------------------+
+
+| REDE CORPORATIVA (192.168.10.0/24) |
+| :--- |
+| +-------------------------+             +-------------------------+ |
+|  | DC01-SERVER |  | CLI01-WIN11 |  |
+|  | Windows Server 2022 |  | Windows 11 Pro |  |
+| :--- | :--- | :--- | :--- | :--- |
+|  | • AD DS (corp.local) | Conexão | • Ingressado no Domínio |  |
+|  | • DNS Server | <=========> | • Mapeamentos via GPO |  |
+|  | • DHCP Server | Ethernet | • Restrições Aplicadas |  |
+|  | • File Server (SMB) |  |  |  |
+|  | IP: 192.168.10.10 |  | IP: 192.168.10.50 (DHCP) |  |
+| +-------------------------+             +-------------------------+ |
+
++-----------------------------------------------------------------------+
