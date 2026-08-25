@@ -2,16 +2,16 @@
 ### Este repositório documenta a implementação prática de uma infraestrutura de rede corporativa *On-Premise* do zero. O objetivo deste laboratório é simular cenários reais de administração de servidores, gestão de identidades com Active Directory Domain Services (AD DS), aplicação de políticas de grupo (GPOs), elaboração de POPs (Procedimentos Operacionais Padrão) e resolução de incidentes (troubleshooting) de Suporte N1/N2.
 ---
 ## 📝 Projetos
-1. Etapas de Implementação AD DS
+[1. Etapas de Implementação AD DS](./)
    * Configuração de servidor Active Directory, Unidades Organizacionais (OUs) e GPOs no Windows Server.
-2. Configurando serviços de rede DHCP, DNS e Servidor de arquivos NTFS
+[2. Configurando serviços de rede DHCP, DNS e Servidor de arquivos NTFS](./)
    * Configuração de Servidor DHCP e Resolução Reversa DNS e implementação de File Server com Permissões Compartilhadas e NTFS.
-3. Aplicação de políticas de grupo (GPO)
+[3. Aplicação de políticas de grupo (GPO)](./)
    * Criando, aplicando e testando políticas de grupos básicas.
-4. Procedimento Operacional Padrão (POP)
+[4. Procedimento Operacional Padrão (POP)](./)
    * POP de Backup básico e Retenção de Dados (VSS & Cobian Reflector)
    * POP de Gestão de Print Server e Manutenção do Spooler de Impressão.
-5. Resolução de incidentes (Troubleshooting)
+[5. Resolução de incidentes (Troubleshooting)](./)
    * KBA
 
 ---
