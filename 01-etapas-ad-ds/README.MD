@@ -1,7 +1,7 @@
 ### 🚧 Status: Em desenvolvimento contínuo.
 
 
-# Módulo 02: Implementação de Infraestrutura Active Directory (AD DS)
+# Implementação de Infraestrutura Active Directory (AD DS)
 ## 🏢 Problema do Negócio
 A empresa não possuía uma gestão centralizada de usuários, computadores e políticas de segurança. Sem um domínio corporativo, a administração de credenciais e permissões era realizada individualmente em cada máquina, gerando brechas de segurança, falta de auditoria de acessos e alto impacto operacional na rotina do suporte N1.
 
