@@ -27,12 +27,5 @@ Este projeto é de evolução progressiva ele aborda e testa os conhecimentos pr
 * Esse Lab-suporte-infra se estende de forma natural e progressiva com a integração do ambiente híbrido em cloud. Finalidade: adicionar a tecnologia do Azure e Entra ID dando sequência ao [Lab-infra-cloud]( ).
 
 
-## 📋 Visão Geral da Topologia
-
-| Ativo / VM | Sistema Operacional | Função / Hostname | Endereço IP |
-| :--- | :--- | :--- | :--- |
-| **Domain Controller** | Windows Server 2022 Standard | `DC01.corp.local` | `192.168.10.10 /24` |
-| **Estação de Trabalho 01** | Windows 11 Pro | `CLI01-WIN11` | `DHCP (192.168.10.50)` |
-| **Gateway / Router** | pfSense / Router Virtual | `GW-CORP` | `192.168.10.1 /24` |
 
 
