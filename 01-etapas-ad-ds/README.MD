@@ -1,19 +1,40 @@
 # 🖥️ Implementação de Infraestrutura On-Premise: Active Directory DS & Serviços Locais (Entra ID Ready)
 
-Este projeto documenta o provisionamento do zero de uma infraestrutura corporativa _On-Premise_ baseada em Windows Server 2022. O foco principal deste laboratório foi aplicar padrões de arquitetura corporativa, gerenciamento de identidades pelo modelo **AGDLP**, serviços essenciais de rede (DNS/DHCP), gestão de arquivos e **preparação da infraestrutura para uma futura integração em Nuvem Híbrida com o Microsoft Entra ID**.
+## 🏢 Problema do Negócio
+A empresa não possuía uma gestão centralizada de usuários, computadores e políticas de segurança. Sem um domínio corporativo, a administração de credenciais e permissões era realizada individualmente em cada máquina, gerando brechas de segurança, falta de auditoria de acessos e alto impacto operacional na rotina do suporte N1.
+
+## 🛠️ Solução Implementada
+Promoção do servidor a Controlador de Domínio (DC) da floresta `techcorp.local`. Foi estruturada uma hierarquia de Unidades Organizacionais (OUs) por departamento, criadas contas de usuários e grupos de segurança seguindo um modelo de controle de acesso (RBAC / AGDLP) e preparado o ambiente para integração híbrida com Microsoft Entra ID.
 
 ---
 ## 📋 Visão Geral do Ambiente (Topologia)
 
 | **Ativo / VM**          | **Sistema Operacional**      | **Função / Hostname** | **Endereço IP / Sub-rede** |
 | ----------------------- | ---------------------------- | --------------------- | -------------------------- |
-| **Domain Controller**   | Windows Server 2022 Standard | `DC01-CORP`           | `192.168.10.10 /24`        |
-| **Gateway Virtual**     | vSwitch Interno (Hyper-V)    | `vSwitch-CORP-LAN`    | `192.168.10.1 /24`         |
+| **Domain Controller**   | Windows Server 2022 Standard | `DC01-CORP` (aka `SRV-DC01`) | `192.168.10.10 /24`        |
+| **Gateway Virtual**     | vSwitch Interno (Hyper-V)    | `vSwitch-CORP-LAN` / `LAB-TECHCORP` | `192.168.10.1 /24`    |
 | **Escopo DHCP**         | Servidor DHCP do AD          | `LAN_Corporativa`     | `192.168.10.50` a `.200`   |
 | **Domínio AD DS**       | Active Directory             | `techcorp.local`      | FQDN Interno               |
 | **Sufixo UPN Roteável** | AD Domains and Trusts        | `techcorp.com.br`     | **Entra ID Ready**         |
 
 ## 📐 Diagrama de Arquitetura do Laboratório
+
+```text
++-----------------------------------------------------------------------+
+
+| REDE CORPORATIVA (192.168.10.0/24) |
+| +-------------------------+             +-------------------------+ |
+|  | DC01-SERVER (DC01-CORP)|  | CLI01-WIN11 |  |
+|  | Windows Server 2022    |  | Windows 11 Pro |  |
+|  | • AD DS (techcorp.local) | Conexão | • Ingressado no Domínio |  |
+|  | • DNS Server           | <=========> | • Mapeamentos via GPO |  |
+|  | • DHCP Server          | Ethernet | • Restrições Aplicadas |  |
+|  | • File Server (SMB)    |  |  |  |
+|  | IP: 192.168.10.10      |  | IP: 192.168.10.50 (DHCP) |  |
+| +-------------------------+             +-------------------------+ |
+
++-----------------------------------------------------------------------+
+```
 
 ```
 +-------------------------------------------------------------------------------+
@@ -44,43 +65,41 @@ Este projeto documenta o provisionamento do zero de uma infraestrutura corporati
 ### Ações Executadas:
 
 - Criação do comutador virtual de rede interna `vSwitch-CORP-LAN` no Hyper-V para isolamento do ambiente de simulação.
-    
-- Provisionamento da VM **Geração 2** (Suporte UEFI/Secure Boot) nomeada como `DC01-CORP` com 4 GB de RAM dinâmica, 2 vCPUs e disco virtual de 60 GB.
-    
+
+- Provisionamento da VM **Geração 2** (Suporte UEFI/Secure Boot) nomeada como `DC01-CORP` (também referenciado como `SRV-DC01` na documentação) com 4 GB de RAM dinâmica, 2 vCPUs e disco virtual de 60 GB.
+
 - Instalação do **Windows Server 2022 Standard (Experiência Desktop)**.
-    
+
 - Padronização do Hostname e fixação do IP Estático `192.168.10.10/24` apontando o DNS para si mesmo.
-    
+
 - Salvamento do Ponto de Verificação: `CKP-ETAPA1-BASE-SO-IPFIXO`.
-    
+
 #### 📸 Evidências Visuais:
 <details>
 <p align="center">
   <img src=".github/assets/01-hyperv-vswitch.png" alt="vSwitch e configs criadas no Hyper-V" width="700"><br>
-  <i>Figura 1: Gerenciador de Comutador Virtual mostrando o `vSwitch-CORP-LAN` criado como rede Interna e as configurações da VM no Hyper-V mostrando a memória (4 GB) e  vCPUs (4).</i>
+  <i>Figura 1: Gerenciador de Comutador Virtual mostrando o `vSwitch-CORP-LAN` criado como rede Interna e as configurações da VM no Hyper-V mostrando a memória (4 GB) e vCPUs.</i>
 </p>
 </details>
 
 ---
-### Ações Executadas:
+### 1. Promoção do Servidor a Controlador de Domínio
 
 - Instalação automatizada das Roles _AD DS_, _DNS Server_ e ferramentas _RSAT_ via PowerShell.
-    
 - Promoção do servidor a Controlador de Domínio gerando uma nova floresta com o FQDN `techcorp.local` e NetBIOS `TECHCORP`.
-    
 - Configuração do nível funcional da floresta/domínio no padrão Windows Server 2016/2022.
-    
 - Criação e validação da **Zona de Pesquisa Inversa de DNS** para a sub-rede `10.168.192.in-addr.arpa`.
-    
 - Salvamento do Ponto de Verificação: `CKP-ETAPA2-ADDS-PROMOTED-DNS`.
-    
-#### 📸 Evidências Visuais:
-<details>
-<p align="center">
-  <img src=".github/assets/01-hyperv-vswitch.png" alt="vSwitch Criado no Hyper-V" width="700"><br>
-  <i>Figura 1: Configuração da rede virtual no Hyper-V.</i>
-</p>
-</details>
+
+#### 📸 Evidências Visuais da Promoção e Estrutura de OUs:
+![Dominio Promovido](img/01-dominio-promovido.png)
+
+### 2. Estrutura de OUs e Objetos de Usuários
+
+- Estrutura de OUs por departamento foi criada (OU_TI, OU_Financeiro, OU_RH, OU_Vendas, OU_Diretoria, OU_Computadores, OU_Grupos) e grupos de segurança associados foram provisionados conforme RBAC/AGDLP.
+
+![Estrutura OUs e Usuarios](img/02-estrutura-ous-usuarios.png)
+
 
 ---
 ### Ações Executadas:
