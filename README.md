@@ -20,7 +20,7 @@
    * Knowledge Base Article (KBA)
 
 ---
-## O que levar em consideração?
+## ⚠️ O que levar em consideração?
 Este projeto é de evolução progressiva ele aborda e testa os conhecimentos práticos com suporte e infraestrutura. A formatação dele permite que aja interação com outros projetos do meu perfil afim de evitar redundâncias entre eles. 
 * Esse Lab-suporte-infra está considerando a topologia e configurações de redes abordadas no sub-projeto específico do [Lab-redes/projetoTechCorp]( ) aonde eu explico o escopo do projeto. Finalidade: simular um ambiente base dentro do nosso projeto de AD e evitando redundância.
 * Esse Lab-suporte-infra está integrado ao [Lab-powershell-scripts]( ) aonde serão centralizados os scripts usados neste projeto. Finalidade: evitar redundância.
