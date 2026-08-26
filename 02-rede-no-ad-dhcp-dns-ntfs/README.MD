@@ -1,5 +1,3 @@
-### 🚧 Status: Em desenvolvimento contínuo.
-
 # Implementação de Serviços Essenciais de Rede (DHCP e DNS)
 
 ## 🎯 Objetivo
@@ -20,10 +18,10 @@ Configurar e validar a distribuição automática de endereçamento de rede via 
 ## 🖼️ Evidências de Validação
 
 ### 1. Concessões Ativas no Console DHCP (`SRV-DC01`)
-![Concessoes Ativas DHCP](imagens/05-dhcp-concessoes.png)
+![Concessoes Ativas DHCP](img/01-dhcp-concessoes.png)
 
 ### 2. Endereço IP e Opções de Rede Recebidas no Cliente (`CLI-TI-01`)
-![IP Configurado via DHCP no Cliente](imagens/06-cliente-ip-dhcp.png)
+![IP Configurado via DHCP no Cliente](img/02-cliente-ip-dhcp.png)
 
 ---
 ---
@@ -50,7 +48,7 @@ Configurar um Servidor de Arquivos (File Server) corporativo no Windows Server 2
 ## 🖼️ Evidências de Validação
 
 ### 1. Configuração de Permissões Avançadas NTFS (`SRV-DC01`)
-![Permissoes NTFS](imagens/07-permissoes-ntfs.png)
+![Permissoes NTFS](img/03-permissoes-ntfs.png)
 
 ### 2. Validação de Controle de Acesso no Cliente (`CLI-TI-01`)
-![Acesso Negado e Mapeamento](imagens/08-acesso-negado-cliente.png)
+![Acesso Negado e Mapeamento](img/04-acesso-negado-cliente.png)
