@@ -56,7 +56,7 @@ Este projeto documenta o provisionamento do zero de uma infraestrutura corporati
 #### 📸 Evidências Visuais:
 <details>
 <p align="center">
-  <img src=".github/assets/01-hyperv-vswitch.png" alt="vSwitch e configs criadas no Hyper-V" width="300"><br>
+  <img src=".github/assets/01-hyperv-vswitch.png" alt="vSwitch e configs criadas no Hyper-V" width="500"><br>
   <i>Figura 1: Gerenciador de Comutador Virtual mostrando o `vSwitch-CORP-LAN` criado como rede Interna e as configurações da VM no Hyper-V mostrando a memória (4 GB) e  vCPUs (4).</i>
 </p>
 </details>
@@ -77,7 +77,7 @@ Este projeto documenta o provisionamento do zero de uma infraestrutura corporati
 #### 📸 Evidências Visuais:
 <details>
 <p align="center">
-  <img src=".github/assets/01-hyperv-vswitch.png" alt="vSwitch Criado no Hyper-V" width="300"><br>
+  <img src=".github/assets/01-hyperv-vswitch.png" alt="vSwitch Criado no Hyper-V" width="500"><br>
   <i>Figura 1: Configuração da rede virtual no Hyper-V.</i>
 </p>
 </details>
@@ -100,15 +100,15 @@ Este projeto documenta o provisionamento do zero de uma infraestrutura corporati
 #### 📸 Evidências Visuais:
 <details>
 <p align="center">
-  <img src=".github/assets/05-adds-installation-ps.png" alt="Terminal do PowerShell executando o comando Install-ADDSForest." width="300"><br>
+  <img src=".github/assets/05-adds-installation-ps.png" alt="Terminal do PowerShell executando o comando Install-ADDSForest." width="500"><br>
   <i>Figura 1: Terminal do PowerShell executando o comando `Install-ADDSForest` e a mensagem de reinício do sistema.</i>
 </p>
 <p align="center">
-  <img src=".github/assets/06-domain-logon-screen.png" alt="Tela de logon do Windows Server exibindo o domínio" width="300"><br>
+  <img src=".github/assets/06-domain-logon-screen.png" alt="Tela de logon do Windows Server exibindo o domínio" width="500"><br>
   <i>Figura 1: Tela de logon do Windows Server exibindo o domínio.</i>
 </p>
 <p align="center">
-  <img src=".github/assets/07-dns-reverse-zone.png" alt="console do Gerenciador DNS mostrando a Zona de Pesquisa Inversa." width="300"><br>
+  <img src=".github/assets/07-dns-reverse-zone.png" alt="console do Gerenciador DNS mostrando a Zona de Pesquisa Inversa." width="500"><br>
   <i>Figura 1: console do Gerenciador DNS (`dnsmgmt.msc`) mostrando a Zona de Pesquisa Inversa `10.168.192.in-addr.arpa` criada.</i>
 </p>
 </details>
@@ -133,19 +133,19 @@ Este projeto documenta o provisionamento do zero de uma infraestrutura corporati
 #### 📸 Evidências Visuais:
 <details>
 <p align="center">
-  <img src=".github/assets/09-aduc-ou-structure.png" alt="Print da janela do `dsa.msc` com a árvore do domínio `techcorp.local` expandida até a sub-OU `TI`, mostrando toda a hierarquia construída." width="300"><br>
+  <img src=".github/assets/09-aduc-ou-structure.png" alt="Print da janela do `dsa.msc` com a árvore do domínio `techcorp.local` expandida até a sub-OU `TI`, mostrando toda a hierarquia construída." width="500"><br>
   <i>Figura 1: Print da janela do `dsa.msc` com a árvore do domínio `techcorp.local` expandida até a sub-OU `TI`, mostrando toda a hierarquia construída.</i>
 </p>
 <p align="center">
-  <img src=".github/assets/11-upn-suffix-domains" alt="Print da janela de propriedades do _Domínios e Relações de Confiança do AD_ mostrando o sufixo `techcorp.com.br` adicionado." width="300"><br>
+  <img src=".github/assets/11-upn-suffix-domains" alt="Print da janela de propriedades do _Domínios e Relações de Confiança do AD_ mostrando o sufixo `techcorp.com.br` adicionado." width="500"><br>
   <i>Figura 1: Print da janela do `dsa.msc` com a árvore do domínio `techcorp.local` expandida até a sub-OU `TI`, mostrando toda a hierarquia construída.</i>
 </p>
 <p align="center">
-  <img src=".github/assets/12-user-upn-aduc.png" alt="Print das propriedades do usuário `Rodrigo Soares` no `dsa.msc` (aba _Conta / Account_) destacando o nome de logon com o sufixo `@techcorp.com.br`." width="300"><br>
+  <img src=".github/assets/12-user-upn-aduc.png" alt="Print das propriedades do usuário `Rodrigo Soares` no `dsa.msc` (aba _Conta / Account_) destacando o nome de logon com o sufixo `@techcorp.com.br`." width="500"><br>
   <i>Figura 1: Print das propriedades do usuário `Rodrigo Soares` no `dsa.msc` (aba _Conta / Account_) destacando o nome de logon com o sufixo `@techcorp.com.br`.</i>
 </p>
 <p align="center">
-  <img src=".github/assets/13-agdlp-groups-members.png" alt="Print das propriedades do grupo `DL_Pasta_TI_RW` (aba _Membros_) mostrando o grupo `GRP_TI_ADM` aninhado." width="300"><br>
+  <img src=".github/assets/13-agdlp-groups-members.png" alt="Print das propriedades do grupo `DL_Pasta_TI_RW` (aba _Membros_) mostrando o grupo `GRP_TI_ADM` aninhado." width="500"><br>
   <i>Figura 1: Print das propriedades do grupo `DL_Pasta_TI_RW` (aba _Membros_) mostrando o grupo `GRP_TI_ADM` aninhado.</i>
 </p>
 </details>
@@ -168,15 +168,15 @@ Este projeto documenta o provisionamento do zero de uma infraestrutura corporati
 #### 📸 Evidências Visuais:
 <details>
 <p align="center">
-  <img src=".github/assets/15-dhcp-scope-active.png" alt="Print do console do DHCP (`dhcpmgmt.msc`) mostrando o escopo `LAN_Corporativa` ativo com o pool de IPs configurado." width="300"><br>
+  <img src=".github/assets/15-dhcp-scope-active.png" alt="Print do console do DHCP (`dhcpmgmt.msc`) mostrando o escopo `LAN_Corporativa` ativo com o pool de IPs configurado." width="500"><br>
   <i>Figura 1: Print do console do DHCP (`dhcpmgmt.msc`) mostrando o escopo `LAN_Corporativa` ativo com o pool de IPs configurado.</i>
 </p>
 <p align="center">
-  <img src=".github/assets/16-file-server-folders.png" alt="Print do File Explorer no caminho `C:\Empresa` mostrando as subpastas dos setores (`TI`, `RH`, `Financeiro`, `Vendas`)." width="300"><br>
+  <img src=".github/assets/16-file-server-folders.png" alt="Print do File Explorer no caminho `C:\Empresa` mostrando as subpastas dos setores (`TI`, `RH`, `Financeiro`, `Vendas`)." width="500"><br>
   <i>Figura 1: Configuração da rede virtual no Hyper-V.</i>
 </p>
 <p align="center">
-  <img src=".github/assets/17-ntfs-permissions-ti.png" alt="Print da aba de **Segurança Avançada** da pasta `TI` mostrando a herança desabilitada e apenas o grupo `DL_Pasta_TI_RW` com permissão de Modificação." width="300"><br>
+  <img src=".github/assets/17-ntfs-permissions-ti.png" alt="Print da aba de **Segurança Avançada** da pasta `TI` mostrando a herança desabilitada e apenas o grupo `DL_Pasta_TI_RW` com permissão de Modificação." width="500"><br>
   <i>Figura 1: Print da aba de **Segurança Avançada** da pasta `TI` mostrando a herança desabilitada e apenas o grupo `DL_Pasta_TI_RW` com permissão de Modificação..</i>
 </p>
 </details>
@@ -227,11 +227,11 @@ Instalação e execução do **Microsoft IdFix** para varredura do diretório `t
 #### 📸 Evidências Visuais:
 <details>
 <p align="center">
-  <img src=".github/assets/15-dhcp-scope-active.png" alt="Resultado do Diagnóstico dcdiag no Terminal." width="300"><br>
+  <img src=".github/assets/15-dhcp-scope-active.png" alt="Resultado do Diagnóstico dcdiag no Terminal." width="500"><br>
   <i>Figura 1: Resultado do Diagnóstico dcdiag no Terminal.</i>
 </p>
 <p align="center">
-  <img src=".github/assets/16-file-server-folders.png" alt="Varredura de Identidades com a Ferramenta Microsoft IdFix." width="300"><br>
+  <img src=".github/assets/16-file-server-folders.png" alt="Varredura de Identidades com a Ferramenta Microsoft IdFix." width="500"><br>
   <i>Figura 1: Varredura de Identidades com a Ferramenta Microsoft IdFix.</i>
 </p>
 </details>
