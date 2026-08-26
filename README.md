@@ -18,7 +18,9 @@
    * POP de Gestão de Print Server e Manutenção do Spooler de Impressão.
 ### [05. Resolução de incidentes (Troubleshooting)](./05-troubleshooting)
    * Knowledge Base Article (KBA)
-
+---
+### [Continua no Laboratório pratico de Azure/entra ID  (⏳Em breve)]( )
+   * Migrando o ambiente On-premise para nuvem.
 ---
 ## ⚠️ O que levar em consideração?
 Este projeto é de evolução progressiva ele aborda e testa os conhecimentos práticos com suporte e infraestrutura. A formatação dele permite que aja interação com outros projetos do meu perfil afim de evitar redundâncias entre eles. 
