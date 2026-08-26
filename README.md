@@ -1,45 +1,31 @@
 # 🖥️ Lab-suporte-infra | Infraestrutura On-Premise, Active Directory DS & GPOs
 ### Este repositório documenta a implementação prática de uma infraestrutura de rede corporativa *On-Premise* do zero. O objetivo deste laboratório é simular cenários reais de administração de servidores, gestão de identidades com Active Directory Domain Services (AD DS), aplicação de políticas de grupo (GPOs), elaboração de POPs (Procedimentos Operacionais Padrão) e resolução de incidentes (troubleshooting) de Suporte N1/N2.
 ---
-## 📝 Projetos
-### [Etapas de Implementação AD DS](./01-etapas-ad-ds)
-   * Configuração de servidor Active Directory, Unidades Organizacionais (OUs) no Windows Server.
-### [Configurando serviços de rede DHCP, DNS e Servidor de arquivos NTFS](./02-rede-no-ad-dhcp-dns-ntfs)
-   * Configuração de Servidor DHCP e Resolução Reversa DNS e implementação de File Server com Permissões Compartilhadas e NTFS.
+## 🤓 Base de conhecimentos consolidados:
+
+>* Fundamentos do Google It Support: redes, administração e sistemas operacionais.
+>* Fundamentos de Active Directory no Windows Learn.
+>* Conhecimentos em PowerShell e criação de Sripts.
+
+---
+## 📝 Projeto Ambiente de Testes:
+### [Etapas do Projeto: AD DS On-Premise](./01-etapas-ad-ds)
+
+   >* Etapa 1: Virtualização e Provisionamento da VM
+   >* Etapa 2: Instalação e Promoção do Domain Controller
+   >* Etapa 3: Arquitetura de Unidades Organizacionais (OUs)
+   >* Etapa 4: Modelo de Identidade, Nomenclatura e Grupos de Segurança
+   >* Etapa 5: Infraestrutura de Arquivos e Serviços Auxiliares
+  > * Etapa 6: Auditoria de Pré-Migração e Validação "Entra ID Ready"
+
+---
+## 📝 Outros Projetos do Laboratórios:
 ### [Aplicação de políticas de grupo (GPO)](./03-aplicar-gpo)
-   * Criando, aplicando e testando políticas de grupos básicas.
+
+   * Criando, aplicando e testando GPOs.
 ### [Procedimento Operacional Padrão (POP)](./04-aplicar-pop)
-   * POP de Backup básico e Retenção de Dados (VSS & Cobian Reflector)
-   * POP de Gestão de Print Server e Manutenção do Spooler de Impressão.
+
+   * Criando, aplicando e testando POPs.
 ### [Resolução de incidentes (Troubleshooting)](./05-troubleshooting)
+
    * Knowledge Base Article (KBA)
-
----
-## 📋 Visão Geral da Topologia
-
-| Ativo / VM | Sistema Operacional | Função / Hostname | Endereço IP |
-| :--- | :--- | :--- | :--- |
-| **Domain Controller** | Windows Server 2022 Standard | `DC01.corp.local` | `192.168.10.10 /24` |
-| **Estação de Trabalho 01** | Windows 11 Pro | `CLI01-WIN11` | `DHCP (192.168.10.50)` |
-| **Gateway / Router** | pfSense / Router Virtual | `GW-CORP` | `192.168.10.1 /24` |
-
----
-## 📐 Diagrama da Arquitetura
-```text
-+-----------------------------------------------------------------------+
-
-| REDE CORPORATIVA (192.168.10.0/24) |
-| :--- |
-| +-------------------------+             +-------------------------+ |
-|  | DC01-SERVER |  | CLI01-WIN11 |  |
-|  | Windows Server 2022 |  | Windows 11 Pro |  |
-| :--- | :--- | :--- | :--- | :--- |
-|  | • AD DS (corp.local) | Conexão | • Ingressado no Domínio |  |
-|  | • DNS Server | <=========> | • Mapeamentos via GPO |  |
-|  | • DHCP Server | Ethernet | • Restrições Aplicadas |  |
-|  | • File Server (SMB) |  |  |  |
-|  | IP: 192.168.10.10 |  | IP: 192.168.10.50 (DHCP) |  |
-| +-------------------------+             +-------------------------+ |
-
-+-----------------------------------------------------------------------+
-```
