@@ -11,3 +11,6 @@ Vinculada diretamente na OU `TechCorp` para afetar todos os usuários e computad
 
 ### 1. Editor de Gerenciamento de Diretiva de Grupo (GPO de Senha)
 ![GPO Politica de Senha](imagens/03-gpo-politica-senha.png)
+
+### 2. Ingresso do Cliente Windows 10 e Validação de GPO
+![Cliente no Dominio e GPO](imagens/04-cliente-dominio-gpo.png)
