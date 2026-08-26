@@ -1,5 +1,5 @@
 # 🖥️ Lab-suporte-infra | Infraestrutura On-Premise, Active Directory DS & GPOs
-### Este repositório documenta a implementação prática de uma infraestrutura de rede corporativa *On-Premise* do zero. O objetivo deste laboratório é simular cenários reais de administração de servidores, gestão de identidades com Active Directory Domain Services (AD DS), aplicação de políticas de grupo (GPOs), elaboração de POPs (Procedimentos Operacionais Padrão) e resolução de incidentes (troubleshooting) de Suporte N1/N2.
+#### Este repositório documenta a implementação prática de uma infraestrutura de rede corporativa *On-Premise* do zero. O objetivo deste laboratório é simular cenários reais de administração de servidores, gestão de identidades com Active Directory Domain Services (AD DS), aplicação de políticas de grupo (GPOs), elaboração de POPs (Procedimentos Operacionais Padrão) e resolução de incidentes (troubleshooting) de Suporte N1/N2.
 ---
 ## 📝 Projetos
 ### [01. Etapas de Implementação AD DS](./01-etapas-ad-ds)
