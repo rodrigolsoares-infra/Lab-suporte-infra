@@ -59,7 +59,5 @@ graph TD
 ### 2. Estrutura de OUs e Objetos de Usuários
 ![Estrutura OUs e Usuarios](imagens/02-estrutura-ous-usuarios.png)
 
-### 3. Ingresso do Cliente Windows 10 e Validação de GPO
-![Cliente no Dominio e GPO](imagens/04-cliente-dominio-gpo.png)
 
 
