@@ -1,6 +1,3 @@
-### 🚧 Status: Em desenvolvimento contínuo.
-
-
 # Implementação de Infraestrutura Active Directory (AD DS)
 ## 🏢 Problema do Negócio
 A empresa não possuía uma gestão centralizada de usuários, computadores e políticas de segurança. Sem um domínio corporativo, a administração de credenciais e permissões era realizada individualmente em cada máquina, gerando brechas de segurança, falta de auditoria de acessos e alto impacto operacional na rotina do suporte N1.
@@ -25,8 +22,8 @@ Promoção do servidor `SRV-DC01` a Controlador de Domínio (DC) da floresta `te
 
 | Ativo / VM | Sistema Operacional | Função / Hostname | Endereço IP |
 | :--- | :--- | :--- | :--- |
-| **Domain Controller** | Windows Server 2022 Standard | `DC01.corp.local` | `192.168.10.10 /24` |
-| **Estação de Trabalho 01** | Windows 11 Pro | `CLI01-WIN11` | `DHCP (192.168.10.50)` |
+| **Domain Controller** | Windows Server 2022 Standard | `DC01.techcorp.local` | `192.168.10.10 /24` |
+| **Estação de Trabalho 01** | Windows 11 Pro | `CLI-TI-01` | `DHCP (192.168.10.50)` |
 | **Gateway / Router** | pfSense / Router Virtual | `GW-CORP` | `192.168.10.1 /24` |
 
 ---
@@ -47,9 +44,7 @@ Promoção do servidor `SRV-DC01` a Controlador de Domínio (DC) da floresta `te
 |  | IP: 192.168.10.10 |  | IP: 192.168.10.50 (DHCP) |  |
 | +-------------------------+             +-------------------------+ |
 
-+-----------------------------------------------------------------------+
-
-```
++-----------------------------------------------------------------------+ ```
 
 ---
 ## 🏗️ Estrutura de Unidades Organizacionais (OUs) e Grupos
@@ -69,9 +64,9 @@ Promoção do servidor `SRV-DC01` a Controlador de Domínio (DC) da floresta `te
 ## 📐 Diagrama da Estrutura de Domínio
 ```mermaid
 graph TD
-    A[Dominio: techcorp.local] --> B[OU: TechCorp_Users]
-    A --> C[OU: TechCorp_Computers]
-    A --> D[OU: TechCorp_Groups]
+    A[Dominio: techcorp.local] --> B[OU: techcorp]
+    A --> C[OU: OU_Computadores]
+    A --> D[OU: OU_Grupos]
     
     B --> E[Usuario: mariana.costa]
     D --> F[Grupo: GRP_RH_RW]
@@ -81,10 +76,10 @@ graph TD
 ## 🖼️ Evidências de Implantação
 
 ### 1. Promoção do Servidor a Controlador de Domínio
-![Dominio Promovido](imagens/01-dominio-promovido.png)
+![Dominio Promovido](img/01-dominio-promovido.png)
 
 ### 2. Estrutura de OUs e Objetos de Usuários
-![Estrutura OUs e Usuarios](imagens/02-estrutura-ous-usuarios.png)
+![Estrutura OUs e Usuarios](img/02-estrutura-ous-usuarios.png)
 
 
 
