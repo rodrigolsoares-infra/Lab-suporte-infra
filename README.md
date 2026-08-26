@@ -2,9 +2,9 @@
 #### Este repositório documenta a implementação prática de uma infraestrutura de rede corporativa *On-Premise* do zero. O objetivo deste laboratório é simular cenários reais de administração de servidores, gestão de identidades com Active Directory Domain Services (AD DS), aplicação de políticas de grupo (GPOs), elaboração de POPs (Procedimentos Operacionais Padrão) e resolução de incidentes (troubleshooting) de Suporte N1/N2.
 ---
 ## Base de conhecimentos aplicadas:
-Google It support 
-Fundamentos de active directory e redes
-Conhecimentos em PowerShell 
+* Google It support 
+* Fundamentos de active directory e redes
+* Conhecimentos em PowerShell 
 ---
 ## O que levar em consideração?
 Este projeto é de evolução progressiva ele aborda e testa os conhecimentos práticos com suporte e infraestrutura. A formatação dele permite que aja interação com outros projetos do meu perfil afim de evitar redundâncias entre eles. 
