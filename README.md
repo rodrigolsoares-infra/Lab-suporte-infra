@@ -35,24 +35,4 @@ Este projeto é de evolução progressiva ele aborda e testa os conhecimentos pr
 | **Estação de Trabalho 01** | Windows 11 Pro | `CLI01-WIN11` | `DHCP (192.168.10.50)` |
 | **Gateway / Router** | pfSense / Router Virtual | `GW-CORP` | `192.168.10.1 /24` |
 
----
-## 📐 Diagrama da Arquitetura
-```text
-+-----------------------------------------------------------------------+
 
-| REDE CORPORATIVA (192.168.10.0/24) |
-| :--- |
-| +-------------------------+             +-------------------------+ |
-|  | DC01-SERVER |  | CLI01-WIN11 |  |
-|  | Windows Server 2022 |  | Windows 11 Pro |  |
-| :--- | :--- | :--- | :--- | :--- |
-|  | • AD DS (corp.local) | Conexão | • Ingressado no Domínio |  |
-|  | • DNS Server | <=========> | • Mapeamentos via GPO |  |
-|  | • DHCP Server | Ethernet | • Restrições Aplicadas |  |
-|  | • File Server (SMB) |  |  |  |
-|  | IP: 192.168.10.10 |  | IP: 192.168.10.50 (DHCP) |  |
-| +-------------------------+             +-------------------------+ |
-
-+-----------------------------------------------------------------------+
-
-```
