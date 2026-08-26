@@ -19,7 +19,7 @@
 ### [05. Resolução de incidentes (Troubleshooting)](./05-troubleshooting)
    * Knowledge Base Article (KBA)
 ---
-### [Continua no Laboratório pratico de Azure/entra ID  (⏳Em breve)]( )
+### [06. Continua no Laboratório pratico de Azure/entra ID  (⏳Em breve)]( )
    * Migrando o ambiente On-premise para nuvem.
 ---
 ## ⚠️ O que levar em consideração?
