@@ -190,8 +190,3 @@ Este projeto documenta o provisionamento do zero de uma infraestrutura corporati
   <i>Figura 1: Print da aba de **Segurança Avançada** da pasta `TI` mostrando a herança desabilitada e apenas o grupo `DL_Pasta_TI_RW` com permissão de Modificação..</i>
 </p>
 </details>
-
----
-### Etapa 6: Auditoria de Pré-Migração e Validação "Entra ID Ready"
-
-Este repositório documenta a etapa final de preparação da infraestrutura *On-Premise*. Antes de realizar a migração ou sincronização com o **Microsoft Entra ID (Azure AD)**, um Analista N2 precisa garantir a integridade dos serviços do Active Directory local e realizar a sanitização da base de identidades.
