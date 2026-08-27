@@ -8,24 +8,18 @@
 >* Conhecimentos em PowerShell e criação de Sripts.
 
 ---
-## 📝 Projeto Ambiente de Testes:
-### [Etapas do Projeto: AD DS On-Premise](./01-etapas-ad-ds)
+## 📝 Projeto de Ambiente de Testes:
+### [Implementação do Projeto: AD DS On-Premise](./01-etapas-ad-ds)
 
    * Etapa 1: Virtualização e Provisionamento da VM
    * Etapa 2: Instalação e Promoção do Domain Controller
    * Etapa 3: Arquitetura de Unidades Organizacionais (OUs)
    * Etapa 4: Modelo de Identidade, Nomenclatura e Grupos de Segurança
    * Etapa 5: Infraestrutura de Arquivos e Serviços Auxiliares
-   * Etapa 6: Auditoria de Pré-Migração e Validação "Entra ID Ready"
 
----
-## 📝 Outros Projetos do Laboratórios:
-### [Aplicação de políticas de grupo (GPO)](./03-aplicar-gpo)
+### [Aprimorando o Projeto: AD DS On-Premise](./02-aprimorando-ad-ds)
 
-   * Criando, aplicando e testando GPOs.
-### [Procedimento Operacional Padrão (POP)](./04-aplicar-pop)
-
-   * Criando, aplicando e testando POPs.
-### [Resolução de incidentes (Troubleshooting)](./05-troubleshooting)
-
-   * Knowledge Base Article (KBA)
+   * Etapa 1: [Aplicação de políticas de grupo (GPO)](./03-aplicar-gpo)
+   * Etapa 2: [Procedimento Operacional Padrão (POP)](./04-aplicar-pop) 
+   * Etapa 3: [Resolução de incidentes (Troubleshooting) e KBA em on-premise](./05-troubleshooting)
+   * Etapa 4: Auditoria de Pré-Migração e Validação "Entra ID Ready
