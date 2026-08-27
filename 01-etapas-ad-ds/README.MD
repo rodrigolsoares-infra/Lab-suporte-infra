@@ -41,6 +41,8 @@ Este projeto documenta o provisionamento do zero de uma infraestrutura corporati
 ```
 ## 🚀 Etapas do Projetos & Decisões Técnicas
 
+###Etapa 1: Virtualização e Provisionamento da VM
+   
 ### Ações Executadas:
 
 - Criação do comutador virtual de rede interna `vSwitch-CORP-LAN` no Hyper-V para isolamento do ambiente de simulação.
@@ -62,6 +64,8 @@ Este projeto documenta o provisionamento do zero de uma infraestrutura corporati
 </details>
 
 ---
+### Etapa 2: Instalação e Promoção do Domain Controller
+   
 ### Ações Executadas:
 
 - Instalação automatizada das Roles _AD DS_, _DNS Server_ e ferramentas _RSAT_ via PowerShell.
@@ -83,6 +87,8 @@ Este projeto documenta o provisionamento do zero de uma infraestrutura corporati
 </details>
 
 ---
+### Etapa 3: Arquitetura de Unidades Organizacionais (OUs)
+   
 ### Ações Executadas:
 
 - Habilitação dos Recursos Avançados (_Advanced Features_) no console `dsa.msc`.
@@ -114,6 +120,8 @@ Este projeto documenta o provisionamento do zero de uma infraestrutura corporati
 </details>
 
 ---
+###Etapa 4: Modelo de Identidade, Nomenclatura e Grupos de Segurança  
+
 ### Ações Executadas:
 
 - Cadastramento do **Sufixo UPN alternativo e roteável** (`@techcorp.com.br`) no _AD Domains and Trusts_, preparando o ambiente para sincronização em nuvem (Entra ID).
@@ -151,6 +159,8 @@ Este projeto documenta o provisionamento do zero de uma infraestrutura corporati
 </details>
 
 ---
+### Etapa 5: Infraestrutura de Arquivos e Serviços Auxiliares
+
 ### Ações Executadas:
 
 - Instalação e autorização do serviço de **DHCP Server** no Active Directory.
@@ -182,7 +192,7 @@ Este projeto documenta o provisionamento do zero de uma infraestrutura corporati
 </details>
 
 ---
-# 🖥️ Ultima Etapa: Health Check & Validação "Entra ID Ready"
+### Etapa 6: Auditoria de Pré-Migração e Validação "Entra ID Ready"
 
 Este repositório documenta a etapa final de preparação da infraestrutura *On-Premise*. Antes de realizar a migração ou sincronização com o **Microsoft Entra ID (Azure AD)**, um Analista N2 precisa garantir a integridade dos serviços do Active Directory local e realizar a sanitização da base de identidades.
 
