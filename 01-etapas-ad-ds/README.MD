@@ -120,7 +120,7 @@ Este projeto documenta o provisionamento do zero de uma infraestrutura corporati
 </details>
 
 ---
-###Etapa 4: Modelo de Identidade, Nomenclatura e Grupos de Segurança  
+### Etapa 4: Modelo de Identidade, Nomenclatura e Grupos de Segurança  
 
 ### Ações Executadas:
 
