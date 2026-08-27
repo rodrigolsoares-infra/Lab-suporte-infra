@@ -41,7 +41,7 @@ Este projeto documenta o provisionamento do zero de uma infraestrutura corporati
 ```
 ## 🚀 Etapas do Projetos & Decisões Técnicas
 
-###Etapa 1: Virtualização e Provisionamento da VM
+### Etapa 1: Virtualização e Provisionamento da VM
    
 ### Ações Executadas:
 
